@@ -3,10 +3,7 @@
  * @return {boolean}
  */
 const isPalindrome = (x) => {
-    const y = x.toString();
-    const z = x.toString().split('') .reverse().join('');
-    
-    if (y === z) return true
+    if (x.toString() === x.toString().split('') .reverse().join('')) return true;
     
     return false
     
