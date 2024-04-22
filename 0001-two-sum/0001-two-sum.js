@@ -5,7 +5,7 @@
  */
 const twoSum = (nums, target) => {
 
-    const numIndices = {};
+    let numIndices = {};
 
     for (let i = 0; i < nums.length; i++) {
         const complement = target - nums[i];
