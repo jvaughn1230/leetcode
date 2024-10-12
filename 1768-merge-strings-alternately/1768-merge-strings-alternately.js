@@ -3,7 +3,7 @@
  * @param {string} word2
  * @return {string}
  */
-var mergeAlternately = function(word1, word2) {
+const mergeAlternately = (word1, word2) => {
     let mergedString = [];
     
     for(let i=0; i < word1.length || i < word2.length; i++){
