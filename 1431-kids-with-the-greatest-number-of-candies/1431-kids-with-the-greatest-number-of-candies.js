@@ -8,10 +8,11 @@ const kidsWithCandies = (candies, extraCandies) => {
     let booleanArray = [];
     
     for(let i = 0; i < candies.length; i++){
-        let kidsTotal = candies[i] + extraCandies
-        let booleanValue = kidsTotal >= max;
-        
-        booleanArray.push(booleanValue)
+        if (candies[i] + extraCandies >= max) {
+      booleanArray.push(true);
+    } else {
+      booleanArray.push(false);
+    }
     }
     
     return booleanArray
