@@ -4,16 +4,16 @@
  * @return {boolean[]}
  */
 const kidsWithCandies = (candies, extraCandies) => {
-    const max = Math.max(...candies);
-    let booleanArray = [];
+    const most = Math.max(...candies);
+    const result = [];
     
-    for(let i = 0; i < candies.length; i++){
-        if (candies[i] + extraCandies >= max) {
-      booleanArray.push(true);
-    } else {
-      booleanArray.push(false);
-    }
-    }
+    candies.forEach((candy) => {
+        const newTotal = candy + extraCandies;
+        
+        const isMost = newTotal >= most;
+        
+        result.push(isMost);
+    })
     
-    return booleanArray
+    return result;
 };
