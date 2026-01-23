@@ -3,5 +3,12 @@
  * @return {boolean}
  */
 const isPalindrome = (x) => {
- return x.toString() === x.toString().split('') .reverse().join('') ?  true :  false;
-}   
+     let stringNumber = x.toString();
+  
+  if (stringNumber.length === 1) return true
+    
+  let reverseString = stringNumber.split("").reverse().join("")
+  
+  if (stringNumber === reverseString) return true
+  return false
+};
